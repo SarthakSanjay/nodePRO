@@ -1,0 +1,19 @@
+# GET http://localhost:3000/api/v1/tasks
+
+
+# POST http://localhost:3000/api/v1/tasks
+# Content-Type: application/json
+
+# {
+#     "title": "foo",
+#     "body": "bar",
+#     "userId": 1
+# }
+
+//get singal task
+# GET http://localhost:3000/api/v1/tasks/sharko
+
+//UPDATE TASK
+# PATCH http://localhost:3000/api/v1/tasks/sharko
+
+# DELETE  http://localhost:3000/api/v1/tasks/sharko
