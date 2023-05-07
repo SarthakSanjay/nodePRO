@@ -1,4 +1,4 @@
-GET http://localhost:3000/api/v1/tasks
+GET http://localhost:3000/api/v1/tasks/6457653884b0b8f9ec5aa493
 
 
 # POST http://localhost:3000/api/v1/tasks
