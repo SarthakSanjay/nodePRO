@@ -1,3 +1,4 @@
-GET http://localhost:3000/api/v1/products?sort=-price
+GET http://localhost:3000/api/v1/products?numericFilters=price>40,rating>=4
+
 
 # GET http://localhost:3000/api/v1/products/static 
