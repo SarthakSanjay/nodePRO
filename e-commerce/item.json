@@ -1,0 +1,122 @@
+[
+    {
+      "productName": "iPhone 13 Pro",
+      "price": 999,
+      "companyName": "Apple",
+      "rating": 4.5
+    },
+    {
+      "productName": "Samsung Galaxy S22 Ultra",
+      "price": 1999,
+      "companyName": "Samsung",
+      "rating": 4.3
+    },
+    {
+      "productName": "Google Pixel 6 Pro",
+      "price": 899,
+      "companyName": "Google",
+      "rating": 4.2
+    },
+    {
+      "productName": "MacBook Pro M1 Pro",
+      "price": 1299,
+      "companyName": "Apple",
+      "rating": 4.6
+    },
+    {
+      "productName": "Dell XPS 13 Plus",
+      "price": 1299,
+      "companyName": "Dell",
+      "rating": 4.4
+    },
+    {
+      "productName": "Microsoft Surface Laptop Studio",
+      "price": 1299,
+      "companyName": "Microsoft",
+      "rating": 4.5
+    },
+    {
+      "productName": "Sony WH-1000XM5",
+      "price": 399,
+      "companyName": "Sony",
+      "rating": 4.7
+    },
+    {
+      "productName": "Apple AirPods Pro",
+      "price": 249,
+      "companyName": "Apple",
+      "rating": 4.6
+    },
+    {
+      "productName": "Samsung Galaxy Buds Pro",
+      "price": 200,
+      "companyName": "Samsung",
+      "rating": 4.5
+    },
+    {
+      "productName": "Bose QuietComfort 45",
+      "price": 279,
+      "companyName": "Bose",
+      "rating": 4.8
+    },
+    {
+      "productName": "Apple Watch Series 7",
+      "price": 399,
+      "companyName": "Apple",
+      "rating": 4.7
+    },
+    {
+      "productName": "Samsung Galaxy Watch 4",
+      "price": 249,
+      "companyName": "Samsung",
+      "rating": 4.6
+    },
+    {
+      "productName": "Fitbit Versa 3",
+      "price": 199,
+      "companyName": "Fitbit",
+      "rating": 4.5
+    },
+    {
+      "productName": "Amazon Echo Show 10",
+      "price": 249,
+      "companyName": "Amazon",
+      "rating": 4.4
+    },
+    {
+      "productName": "Google Nest Hub Max",
+      "price": 229,
+      "companyName": "Google",
+      "rating": 4.3
+    },
+    {
+      "productName": "Apple HomePod Mini",
+      "price": 99,
+      "companyName": "Apple",
+      "rating": 4.5
+    },
+    {
+      "productName": "Samsung Galaxy Buds 2",
+      "price": 149,
+      "companyName": "Samsung",
+      "rating": 4.4
+    },
+    {
+      "productName": "Sony WH-CH710N",
+      "price": 179,
+      "companyName": "Sony",
+      "rating": 4.6
+    },
+    {
+      "productName": "Jabra Elite 7 Pro",
+      "price": 229,
+      "companyName": "Jabra",
+      "rating": 4.7
+    },
+    {
+      "productName": "Logitech MX Master 3",
+      "price": 99,
+      "companyName": "Logitech",
+      "rating": 4.7
+    }
+]
