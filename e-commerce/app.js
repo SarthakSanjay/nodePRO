@@ -7,9 +7,10 @@ const port = process.env.PORT || 3000
 const connectDB = require('./db/connect')
 // const items = require('./model/item')
 const router = require('./router/item')
+const login = require('./router/login')
 app.use(express.json())
-app.use(router)
-
+app.use('/api/v1/items',router)
+app.use('/login',login)
 const start = async() =>{
     try {
         await connectDB(process.env.URL)

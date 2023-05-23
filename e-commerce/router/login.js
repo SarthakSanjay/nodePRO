@@ -1,6 +1,5 @@
 const express = require('express')
-const getItems = require('../controllers/item')
 const router = express.Router()
-router.route('/').get(getItems)
-
+const {login} = require('../controllers/item')
+router.route('/').get(login)
 module.exports = router
