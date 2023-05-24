@@ -16,9 +16,13 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:'provide email',
         match: /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+$/ ,
-        unique: true,
+        // unique: true,
         index:true
 
+    },
+    techStack:{
+        name:String,
+        salary:String
     },
     password:{
         type:String,
@@ -33,8 +37,12 @@ const myUserModel = mongoose.model("USERS",userSchema)
 
 //create document
 const doc = new myUserModel({
-    name:"barko",
-    email:"sharko@gmail.com",
+    name:"sharko",
+    email:"shaarkoo@gmail.com",
+    techStack:{
+        name:"MERN",
+        salary:"$100k"
+    },
     password: '12345678'
 
 })
@@ -47,16 +55,26 @@ const doc = new myUserModel({
 //     console.log("error occured",error)
 // })
 
-myUserModel.deleteMany()
-.then(()=>{console.log('deleted all')})
+// myUserModel.deleteMany()
+// .then(()=>{console.log('deleted all')})
+// .catch((err)=>{console.log(err)})
+
+// myUserModel.findOne({name:'barko'})
+// .then((data)=>{console.log(data)})
+// .catch((err)=>{console.log(err)})
+
+// myUserModel.deleteOne({name:'sharko'})
+// .then((data)=>{console.log(data)})
+// .catch((err)=>{console.log(err)})
+myUserModel.deleteOne({'techStack.name':'MERN'})
+.then((data)=>{console.log(data)})
 .catch((err)=>{console.log(err)})
 
-
 app.get('/', async(req,res)=>{
-    const product = await myUserModel.find({})
+    const user = await myUserModel.find()
     res.status(200).json({
-        product,
-        nbHits: product.length
+        user,
+        nbHits: user.length
     })
 })
 
