@@ -11,11 +11,13 @@ const adderessSchema = new mongoose.Schema({
 const userSchema = new mongoose.Schema({
     name:{
         type:String,
-        required:true
+        required:true,
+        maxLength:20
     },
     age:{
         type:Number,
-        default:20
+        default:20,
+        min:1
     },
     sex:{
         type:String,
@@ -29,7 +31,11 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default:Date.now()
     },
-    adderess: adderessSchema
+    adderess: adderessSchema ,
+    bestfreind:{
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: 'Users'
+    }
 })
 
 module.exports = new mongoose.model('Users', userSchema)
