@@ -43,6 +43,8 @@ const run = async() => {
     try {
         await mongoose.connect(process.env.BLOG)
         .then(console.log('connected to db'))
+        // .then(createBlog() ,console.log('inserted blog'))
+        .then(seeAllBlogs(),totalDocs())
         .catch((error)=> {
             console.log(error)
         })
