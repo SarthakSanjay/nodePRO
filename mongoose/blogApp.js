@@ -50,17 +50,20 @@ const deleteABlog = (id) =>{
     .catch((e)=>{console.log(e)})
 }
 const deleteAllBlog = () =>{
-    BLOG.deleteMany()
+    BLOG.deleteMany().then(console.log('deleted all')).catch((e)=>console.log("error deleting ",e))
 }
 const totalDocs = async () => {
     await BLOG.countDocuments().then(count => console.log(count)).catch((e) => console.log(e))
 
 }
+
+
 const run = async () => {
     try {
         await mongoose.connect(process.env.BLOG)
             .then(console.log('connected to db'))
-            // createBlog()
+            // deleteAllBlog()
+            createBlog()
             // updateBlog("64724e9bf0ddcd488e3e4ef8","one piece anime", "luffy chacha")
             // deleteABlog("64724e9bf0ddcd488e3e4ef8")
             seeAllBlogs()
@@ -89,3 +92,4 @@ const run = async () => {
 }
 
 run()
+
