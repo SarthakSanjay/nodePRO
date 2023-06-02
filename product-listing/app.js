@@ -3,13 +3,13 @@ const express = require("express")
 const mongoose = require("mongoose")
 const app = express()
 const port = process.env.PORT || 3000
-// const USERS = require("./models/user")
+const USERS = require("./models/user")
 
 const registerUser = require('./routes/register')
 app.use('/register' , registerUser)
 
-
-
+const loginUser = require('./routes/login')
+app.use('/login',loginUser)
 
 app.use(express.urlencoded({extended:true}))
 app.set('view engine','ejs')
