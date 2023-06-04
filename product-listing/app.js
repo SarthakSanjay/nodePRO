@@ -5,17 +5,21 @@ const app = express()
 const port = process.env.PORT || 3000
 const USERS = require("./models/user")
 const PRODUCT = require('./models/product')
-const products = require('../e-commerce/item.json')
-
-app.use(express.static('public'))
-const registerUser = require('./routes/register')
-app.use('/register' , registerUser)
-
-const loginUser = require('./routes/login')
-app.use('/login',loginUser)
+// const products = require('../e-commerce/item.json')
 
 app.use(express.urlencoded({extended:true}))
+app.use(express.static('public'))
 app.set('view engine','ejs')
+
+//register user route
+const registerUser = require('./routes/register')
+app.use('/register' , registerUser)
+// login user route
+const loginUser = require('./routes/login')
+app.use('/login',loginUser)
+// product route
+const productRoutes = require('./routes/product')
+app.use('/products',productRoutes)
 
 app.get('/test',(req,res)=>{
     console.log(req)
@@ -30,10 +34,7 @@ app.get('/users',async(req,res)=>{
     res.status(200).render('user')
 })
  
-app.get('/products',async(req,res)=>{
-    const products = await PRODUCT.find({})
-    res.status(200).json({total:products.length,products:products})
-})
+
 const start = async() =>{
     console.log("script started")
     try {
