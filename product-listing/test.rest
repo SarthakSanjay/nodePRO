@@ -1,0 +1,7 @@
+# GET http://localhost:3000/products
+GET http://localhost:3000/products/product?name=iphone 13 pro
+# Content-Type: application/json
+
+# {
+#   "productName": "iPhone 13 Pro"
+# }
