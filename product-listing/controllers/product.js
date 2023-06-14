@@ -4,10 +4,13 @@ const getAllProducts = async(req,res)=>{
     res.status(200).json({total:products.length,products:products})
 }
 const getProduct = async (req,res) =>{
-    const name = req.body.name
-    const product = await PRODUCT.findOne({productName:name})
+    // const name = req.body.name
+    const {name} = req.query
+    console.log(req.query)
+    const product = await PRODUCT.findOne({productName:String(name)})
     console.log(name)
-    if(!name){
+    console.log(product)
+    if(!product){
      return res.status(404).send("Not found")
     }
     res.status(200).json({ product:product})
