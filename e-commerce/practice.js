@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
         required:'provide email',
         match: /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+$/ ,
         // unique: true,
-        index:true
+        // index:true
 
     },
     techStack:{
@@ -47,13 +47,13 @@ const doc = new myUserModel({
 
 })
 
-// doc.save()
-// .then(()=>{
-//     console.log('document saved')
-// })
-// .catch((error)=>{
-//     console.log("error occured",error)
-// })
+doc.save()
+.then(()=>{
+    console.log('document saved')
+})
+.catch((error)=>{
+    console.log("error occured",error)
+})
 
 // myUserModel.deleteMany()
 // .then(()=>{console.log('deleted all')})
@@ -66,9 +66,9 @@ const doc = new myUserModel({
 // myUserModel.deleteOne({name:'sharko'})
 // .then((data)=>{console.log(data)})
 // .catch((err)=>{console.log(err)})
-myUserModel.deleteOne({'techStack.name':'MERN'})
-.then((data)=>{console.log(data)})
-.catch((err)=>{console.log(err)})
+// myUserModel.deleteOne({'techStack.name':'MERN'})
+// .then((data)=>{console.log(data)})
+// .catch((err)=>{console.log(err)})
 
 app.get('/', async(req,res)=>{
     const user = await myUserModel.find()
